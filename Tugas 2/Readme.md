@@ -1,40 +1,39 @@
-# Tugas 2 : Analisis Koneksi TCP Menggunakan Wireshark
+# Tugas 2: Analisis Koneksi TCP dengan Wireshark
 
 ## Deskripsi Singkat
 
-Pada tugas ini, saya melakukan analisis terhadap komunikasi TCP antara client dan server berdasarkan sample capture Wireshark yang diberikan, yaitu file **http.cap**. dari sample capture ini, analisis dilakukan untuk mengamati alur komunikasi mulai dari Connection establishment using three-way handshaking, Data Transfer dan Connection termination using three-way handshaking.
+Pada tugas ini, saya menganalisis komunikasi TCP antara client dan server berdasarkan sample capture Wireshark yang diberikan, yaitu file **http.cap.** Analisis dilakukan untuk mengamati alur komunikasi yang meliputi tahap Connection Establishment menggunakan three-way handshaking, Data Transfer, dan Connection Termination menggunakan three-way handshaking.
 
-Dari **43 paket** yang tercatat dalam file capture **http.cap**,  hanya **34 paket** yang berhasil diproses dalam komunikasi TCP yang melibatkan client dan server.
+Dari total**43 paket** yang tercatat dalam file **http.cap**, hanya **34 paket** yang berhasil diproses dalam komunikasi TCP yang terjadi antara client dan server.
 
+## Diagram Urutan TCP
 
-## TCP Sequence Diagram
+**1.Pendirian Koneksi (Three-Way Handshaking)**
 
-**1. Connection Establishment (Three-way handshaking)**
+- **Client** mengirimkan paket **SYN** untuk proses koneksi.
+- **Server** merespons dengan paket **SYN** + **ACK**, menandakan bahwa server menerima permintaan dan siap untuk melanjutkan komunikasi.
+- **Client** kemudian mengirimkan **ACK** menyelesaikan proses handshake dan membuka koneksi.
+- Tahap ini digambarkan dalam diagram urutan TCP pada langkah 1 hingga 3.
 
-- **Client** mengirimkan paket **SYN** untuk memulai koneksi
-- **Server** merespon dengan paket **SYN + ACK** untuk mengkonfirmasi penerimaan dan siap berkomunikasi
-- **Client** kemudian mengirimkan **ACK** untuk menyelesaikan handshake dan membuka koneksi
-- tahap ini digambarkan pada TCP Sequence diagram dimulai dari step 1-3.
+**2. Transfer Data** 
 
-**2. Data Transfer** 
-
-- **Step 4: PSH + ACK**
+- **Langkah 4: PSH + ACK**
    Seq = 1, Ack = 1. Client mengirimkan 479 byte data.
 
-- **Step 5: ACK**
-   Seq = 1, Ack = 480. Server mengonfirmasi penerimaan data yang dikirim oleh client, Ack = 480 menunjukkan bahwa server sudah menerima data hingga byte ke 479 dari client dan mengharapkan data selanjutnya dimulai dari byte 480.
+- **Langkah 5: ACK**
+   SSeq = 1, Ack = 480. Server mengonfirmasi penerimaan data dari client, dengan Ack = 480 yang menunjukkan bahwa data hingga byte ke-479 telah diterima dan server siap menerima data berikutnya mulai dari byte 480.
 
-- **Step 6: ACK**
-   Seq = 1, Ack = 480. Server mengirimkan 1380 byte data dimulai dari Seq = 1, yang berarti data yang dikirimkan dimulai dari byte ke-1 hingga byte ke-1380.
+- **Langkah 6: ACK**
+   Seq = 1, Ack = 480. Server mengirimkan 1380 byte data mulai dari Seq = 1, yang berarti data dimulai dari byte pertama hingga byte ke-1380.
 
-- **Step 7: ACK**
-   Seq = 480, Ack = 1381. Client mengkonfirmasi penerimaan data dari server dengan Ack = 1381, menunjukkan bahwa client sudah menerima semua data hinga byte ke 1380 dari server. Seq = 480 menunjukkan urutan data yang dikirimkan oleh client setelah menerima data dari server.
+- **Langkah 7: ACK**
+   Seq = 480, Ack = 1381. Client mengonfirmasi penerimaan data dari server dengan Ack = 1381, menandakan bahwa client telah menerima data hingga byte ke-1380 dan siap menerima data berikutnya mulai dari byte ke-1381.
 
-Proses Data Transfer terus berlanjut hingga Step 30. Data yang dikirimkan akan terus memiliki urutan nomor Sequence yang sesuai, dan Acknowledgment Number dari kedua pihak akan mengonfirmasi bahwa setiap paket diterima dengan benar. Setelah seluruh data terkirim, koneksi akan ditutup dengan paket FIN untuk mengakhiri sesi komunikasi.
+Proses transfer data ini berlanjut hingga langkah ke-30, dengan urutan nomor Sequence dan Acknowledgment Number yang terus disesuaikan untuk memastikan setiap paket data diterima dengan benar. Setelah seluruh data terkirim, koneksi akan ditutup dengan paket FIN untuk mengakhiri sesi komunikasi.
 
-**3. Connection termination (three-way handshaking)** 
+**3.Pengakhiran Koneksi (Three-Way Handshaking)** 
 
-- **Step 31 :** Server mengirimkan **FIN + ACK** yang menandakan bahwa server ingin menutup koneksi.
-- **Step 32 :** Client mengkonfirmasi dengan **ACK**.
-- **Step 33 :** Client mengirimkan **FIN + ACK** yang menandakan bahwa client juga ingin menutup koneksi.
-- **Step 34 :** server mengkonfirmasi penutupan koneksi dengan **ACK**.
+- **Langkah 31:** Server mengirimkan paket **FIN + ACK** yang menandakan keinginan server untuk menutup koneksi..
+- **Langkah 32 :** Client merespons dengan paket **ACK** untuk mengonfirmasi penutupan koneksi.
+- **Langkah 33 :** Client mengirimkan paket **FIN + ACK** untuk menandakan bahwa client juga ingin menutup koneksi.
+- **Langkah 34:** erver mengonfirmasi penutupan koneksi dengan mengirimkan paket **ACK**.
