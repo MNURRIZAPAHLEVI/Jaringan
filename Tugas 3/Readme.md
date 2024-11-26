@@ -168,7 +168,7 @@ Dengan HTML
 
 ### **Cara Menjalankan**
 
-1. **Tempatkan Semua File di Folder yang Sama**: Pastikan `index.html`, `style.css`, `script.js`, dan `image.png` berada di direktori yang sama.
+1. **Tempatkan Semua File di Folder yang Sama**: Pastikan `index.html`, berada di direktori yang sama.
     
 2. **Jalankan Web Server**:
     
