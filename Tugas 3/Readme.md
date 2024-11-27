@@ -188,4 +188,4 @@ Dengan HTML
 ---
 
 ### Hasil yang Diharapkan
-akan ditampilkan pada gambar
+akan ditampilkan pada gambar **<Folder Assets>**
