@@ -1,20 +1,20 @@
-# Membuat Docker
+#TUGAS WEBSERVER Dengan Docker
 Untuk menginstal web server berbasis Docker dengan dukungan HTTP/1.1, HTTP/2.0, dan HTTP/3.0, mengaksesnya melalui website, dan menganalisis http yang digunakan, berikut langkah-langkahnya:
 
 ---
 
 ### 1. **Persiapan Lingkungan**
 
-- Pastikan Docker telah terinstal di sistem Anda.
+- Pastikan Docker telah terinstal.
 - Unduh dan instal browser versi terbaru.
 
 ---
 
 ### 2. **Konfigurasi Docker untuk Web Server**
 
-Kita akan menggunakan **NGINX** sebagai contoh web server karena mendukung HTTP/1.1, HTTP/2, dan HTTP/3.
+menggunakan **NGINX** sebagai contoh web server karena mendukung HTTP/1.1, HTTP/2, dan HTTP/3.
 
-#### a. **Buat File Docker Compose**
+#### a. **Buat File Docker Compose 1.1 Dan 2.0**
 
 Buat file `docker-compose.yml` dengan konfigurasi berikut:
 
@@ -73,7 +73,7 @@ docker-compose up
 ```
 
 ---
-#### 3.1 Aktifkan run.docker.sh
+#### 3.1 Tambahan Untuk Aktifkan HTTP 3.0 Aktifkan/Create run.docker.sh
 ```
 #!/bin/sh
 sudo docker run --rm \
