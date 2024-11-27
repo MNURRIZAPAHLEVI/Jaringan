@@ -1,4 +1,4 @@
-# Tugas 2: Analisis Koneksi TCP dengan Wireshark
+# Tugas 2: Analisis Koneksi http.cap dengan Wireshark
 
 ## Deskripsi Singkat
 
