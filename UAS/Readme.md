@@ -14,8 +14,10 @@ Answer the following questions for the TCP segments:
 6.	Consider the TCP segment containing the HTTP POST as the first segment in the TCP connection. What are the sequence numbers of the first six TCP connection segments (including the HTTP POST segment)? At what time was each segment sent? When was the ACK for each segment received? Given the difference between when each TCP segment was sent, and when its acknowledgement was received, what is the RTT value for each of the six segments? What is the EstimatedRTT value (see page 237 in textbook) after the receipt of each ACK? Assume that the value of the EstimatedRTT is equal to the measured RTT for the first segment, and then is computed using the EstimatedRTT equation on page 237 for all subsequent segments. (30%)
 Note: Wireshark has a nice feature that allows you to plot the RTT for each of the TCP segments sent. Select a TCP segment in the “listing of captured packets” window that is being sent from the client to the gaia.cs.umass.edu server. Then select: Statistics->TCP Stream Graph->Round Trip Time Graph.
 
-7.	What is the length of each of the first six TCP segments?(Attach the screenshot of your Wireshark's display)  (15%)
-                                                                         **ANSWER :**
+7.	What is the length of each of the first six TCP segments?(Attach the screenshot of your Wireshark's display)  (15%).
+   
+                                                                         ###ANSWER:###
+  	
   1.	   Client Compurer : 
 	Used Ip Address : 192.168.1.102
 	Tcp port Number : 1161
