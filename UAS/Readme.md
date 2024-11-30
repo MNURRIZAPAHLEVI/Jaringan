@@ -15,8 +15,8 @@ Answer the following questions for the TCP segments:
 Note: Wireshark has a nice feature that allows you to plot the RTT for each of the TCP segments sent. Select a TCP segment in the “listing of captured packets” window that is being sent from the client to the gaia.cs.umass.edu server. Then select: Statistics->TCP Stream Graph->Round Trip Time Graph.
 
 7.	What is the length of each of the first six TCP segments?(Attach the screenshot of your Wireshark's display)  (15%).
-   
-                                                                         ###ANSWER:###
+
+# ANSWER:
   	
   1.	   Client Compurer : 
 	Used Ip Address : 192.168.1.102
