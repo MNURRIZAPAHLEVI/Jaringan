@@ -24,4 +24,4 @@ Note: Wireshark has a nice feature that allows you to plot the RTT for each of t
 	Ip Address : 128.119.245.12
 	Tcp Port Number : 80
 
- ![alt text](?raw=true)
+ ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture%201.png?raw=true)
