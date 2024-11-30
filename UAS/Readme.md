@@ -16,14 +16,19 @@ Note: Wireshark has a nice feature that allows you to plot the RTT for each of t
 
 7.	What is the length of each of the first six TCP segments?(Attach the screenshot of your Wireshark's display)  (15%).
 
-# ANSWER:
-  	
-  1.	   Client Compurer : 
+	# ANSWER:
+**No 1.** Client Computer : 
+
 	Used Ip Address : 192.168.1.102
 	Tcp port Number : 1161
 	
   Destination computer: gaia.cs.umass.edu(This is the domain name of a server. This domain name is translated into a numeric IP address by the Domain Name System     (DNS) so that computers can locate the destination server.)
+  
 	Ip Address : 128.119.245.12
 	Tcp Port Number : 80
 
  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture%201.png?raw=true)
+ 
+ **Picture 1 : IP addresses and TCP port numbers of the client computer (source) and gaia.cs.umass.edu**
+
+ **No 2.** Client Computer : 
