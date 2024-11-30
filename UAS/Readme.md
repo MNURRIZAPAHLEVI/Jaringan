@@ -63,3 +63,94 @@ Here's a breakdown of why this is the case:
 
 The SYN flag is set to 1 and it indicates that this segment is a SYN segment. which further confirms that this is a SYN segment used to initiate the connection handshake between the client and the server.
 
+**No 4.** 
+
+![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture4.png?raw=true)
+ 
+**Picture 4 : Sequence number and Acknowledgement number of the SYNACK segment**
+
+Solution: 
+**Sequence number of the SYNACK segment**: Sequence number of the SYNACK segment from gaia.cs.umass.edu to the client computer in reply to the SYN has the value of 0 in this trace.
+	
+**ACKnowledgement field value in the SYNACK segment**: The value of the ACKnowledgement field in the SYNACK segment is 1.
+
+**How gaia.cs.umass.edu determined the ACK value**: The server acknowledges the receipt of the SYN segment sent by the client by setting the ACK field in the SYNACK segment to 1. This value (1) signifies that the server has received all the data up to the sequence number of the client's SYN segment (0).
+
+**Identifying the segment as a SYNACK segment**: Two flags in the TCP header identify the segment as a SYNACK segment: 
+- **SYN flag set to 1**: This indicates that the segment is initiating a connection request from the server.
+- **SYN ACK flag set to 1**: This acknowledges the receipt of the client's SYN segment.
+
+  **No 5.**
+
+  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture5.png?raw=true)
+ 
+**Picture 5 : Sequence number and Acknowledgement number of the SYNACK segment**
+
+Solution:  Segment is the TCP segment containing the HTTP POST command. The sequence number of this segment has the value of 1. 
+
+**No 6.**
+Solution: The HTTP POST segment is considered as the first segment. Segments 1 – 6 are No. 4, 5, 7, 8, 10, and 11 in this trace respectively. The ACKs of segments 1 – 6 are No. 6, 9, 12, 14, 15, and 16 in this trace.
+
+**Segment 1 sequence number: 1 
+Segment 2 sequence number: 566 
+Segment 3 sequence number: 2026 
+Segment 4 sequence number: 3486 
+Segment 5 sequence number: 4946 
+Segment 6 sequence number: 6406**
+
+The sending time and the received time of ACKs are tabulated in the following table.
+![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Table RTT.png?raw=true)
+
+How to get RTT Second segment 1? 
+( Ack Received Time – Sent Time= Rtt (Second) )
+
+How to get RTT Second segment 2-6 ? 
+(EstimatedRTT = 0.875 * EstimatedRTT + 0.125 * SampleRTT)
+
+EstimatedRTT after the receipt of the ACK of segment 1:
+EstimatedRTT = RTT for Segment 1 = 0.02746 second
+
+EstimatedRTT after the receipt of the ACK of segment 2: 
+EstimatedRTT = 0.875 * 0.02746 + 0.125 * 0.035557 = 0.0285
+
+EstimatedRTT after the receipt of the ACK of segment 3: 
+EstimatedRTT = 0.875 * 0.0285 + 0.125 * 0.070059 = 0.0337
+
+EstimatedRTT after the receipt of the ACK of segment 4: 
+EstimatedRTT = 0.875 * 0.0337+ 0.125 * 0.11443 = 0.0438
+
+EstimatedRTT after the receipt of the ACK of segment 5: 
+EstimatedRTT = 0.875 * 0.0438 + 0.125 * 0.13989 = 0.0558
+
+EstimatedRTT after the receipt of the ACK of segment 6: 
+EstimatedRTT = 0.875 * 0.0558 + 0.125 * 0.18964 = 0.0725 Second
+
+  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture6.png?raw=true)
+
+**Picture 6 : Segments 1 – 6**
+
+  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture7.png?raw=true)
+
+**Picture 7 : ACKs of segments 1 - 6**
+
+  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture8.png?raw=true)
+
+**Picture 8 : Round Trip Time Graph**
+
+**No 7.**
+
+Solution: Length of the first TCP segment (containing the HTTP POST): 565 bytes Length of each of the other five TCP segments: 1460 bytes (MSS) 
+
+The first segment is smaller because it contains the HTTP POST request, while the following segments use the full MSS of 1460 bytes to transfer more application data.
+
+ ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture9.png?raw=true)
+
+**Picture 9 : Lenghts of Segments 1 – 6**
+
+ ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture10.png?raw=true)
+
+**Picture 10 : TCP Segments 1 565 Bytes**
+
+ ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture11.png?raw=true)
+
+**Picture 9 : TCP Segments 2 - etc 1460 Bytes **
