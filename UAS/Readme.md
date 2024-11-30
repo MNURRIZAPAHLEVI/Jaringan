@@ -99,7 +99,7 @@ Segment 5 sequence number: 4946
 Segment 6 sequence number: 6406**
 
 The sending time and the received time of ACKs are tabulated in the following table.
-![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Table RTT.png?raw=true)
+![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Tabel%20RTT.png?raw=true)
 
 How to get RTT Second segment 1? 
 ( Ack Received Time – Sent Time= Rtt (Second) )
