@@ -17,8 +17,9 @@ Note: Wireshark has a nice feature that allows you to plot the RTT for each of t
 7.	What is the length of each of the first six TCP segments?(Attach the screenshot of your Wireshark's display)  (15%).
 
 	# ANSWER:
-**No 1.** Client Computer : 
+**No 1.** 
 
+	Client Computer : 
 	Used Ip Address : 192.168.1.102
 	Tcp port Number : 1161
 	
@@ -31,4 +32,34 @@ Note: Wireshark has a nice feature that allows you to plot the RTT for each of t
  
  **Picture 1 : IP addresses and TCP port numbers of the client computer (source) and gaia.cs.umass.edu**
 
- **No 2.** Client Computer : 
+ **No 2.** 
+
+  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture2.png?raw=true)
+
+  **Picture 2 : IP addresses and TCP port numbers gaia.cs.umass.edu**
+
+
+  	Destination computer: gaia.cs.umass.edu
+	Ip Address : 128.119.245.12
+	Tcp Port Number : 80
+
+ **No 3.** 
+ 
+ ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture3.png?raw=true)
+ 
+**Picture 3 : Sequence number of the TCP SYN segment**
+
+Solution : Sequence number of the TCP SYN segment is used to initiate the TCP connection between the client computer and gaia.cs.umass.edu. The value is 0 in this trace.
+
+This is because the sequence number is used to synchronize the data stream between the sender and receiver and initiate a new connection. When a new connection is established, there's no prior sequence to reference, so the initial sequence number is set to 0
+
+Here's a breakdown of why this is the case:
+
+- **TCP Sequence Numbers: TCP uses sequence numbers to ensure reliable and in-order delivery of data packets. Each byte of data sent within a connection has a unique sequence number.**
+
+- **Initiating a Connection: The SYN segment marks the beginning of a TCP connection establishment process. It includes the initial sequence number that the sender will use for the data portion of the connection.**
+
+- **No Prior Sequence: Since this is the first segment to initiate the connection, there's no prior sequence number to reference. Therefore, the sender sets the sequence number in the SYN segment to 0.**
+
+The SYN flag is set to 1 and it indicates that this segment is a SYN segment. which further confirms that this is a SYN segment used to initiate the connection handshake between the client and the server.
+
