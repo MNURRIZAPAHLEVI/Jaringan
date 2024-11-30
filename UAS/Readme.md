@@ -153,4 +153,4 @@ The first segment is smaller because it contains the HTTP POST request, while th
 
  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/UAS/Picture/Picture11.png?raw=true)
 
-**Picture 9 : TCP Segments 2 - etc 1460 Bytes **
+**Picture 9 : TCP Segments 2 - etc 1460 Bytes**
