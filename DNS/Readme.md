@@ -4,17 +4,17 @@ Pengertian DNS: DNS (Domain Name System) adalah sistem yang digunakan untuk mene
 
 ##   Cara Kerja DNS:
 
-### 1. Permintaan DNS: Ketika pengguna memasukkan alamat situs web di browser, seperti "www.example.com", browser mengirimkan permintaan ke server DNS.
-### 2. Pencarian Alamat IP: Server DNS kemudian mencari nama domain tersebut dalam basis data mereka untuk menemukan alamat IP yang sesuai. Jika alamat IP ditemukan, server DNS akan mengembalikannya ke browser.
-### 3. Pencarian Rekursif atau Iteratif: Jika server DNS tidak dapat menemukan alamat IP di basis data lokalnya, permintaan tersebut akan diteruskan ke server DNS lain yang lebih tinggi dalam hierarki, hingga menemukan server yang memiliki informasi yang diperlukan.
+1. Permintaan DNS: Ketika pengguna memasukkan alamat situs web di browser, seperti "www.example.com", browser mengirimkan permintaan ke server DNS.
+2. Pencarian Alamat IP: Server DNS kemudian mencari nama domain tersebut dalam basis data mereka untuk menemukan alamat IP yang sesuai. Jika alamat IP ditemukan, server DNS akan mengembalikannya ke browser.
+3. Pencarian Rekursif atau Iteratif: Jika server DNS tidak dapat menemukan alamat IP di basis data lokalnya, permintaan tersebut akan diteruskan ke server DNS lain yang lebih tinggi dalam hierarki, hingga menemukan server yang memiliki informasi yang diperlukan.
 
-## Bagaimana DNS Bekerja:
+Bagaimana DNS Bekerja:
 
 Resolusi Nama: DNS menyimpan informasi dalam bentuk database yang terdiri dari catatan atau "record". Misalnya, catatan A (A record) menyimpan alamat IP dari domain tertentu, sedangkan catatan MX (Mail Exchange) menyimpan informasi terkait server email.
 Hierarki DNS: DNS bekerja berdasarkan sistem hierarki, yang terdiri dari beberapa level:
-### 1. Root DNS Servers: Server yang mengarahkan permintaan ke domain tingkat atas.
-### 2. TLD (Top Level Domain) Servers: Server yang menangani domain tingkat atas seperti .com, .org, .net, dan sebagainya.
-### 4. Authoritative DNS Servers: Server yang memiliki informasi paling akurat dan terupdate mengenai domain tertentu.
+1. Root DNS Servers: Server yang mengarahkan permintaan ke domain tingkat atas.
+2. TLD (Top Level Domain) Servers: Server yang menangani domain tingkat atas seperti .com, .org, .net, dan sebagainya.
+4. Authoritative DNS Servers: Server yang memiliki informasi paling akurat dan terupdate mengenai domain tertentu.
 
 ## Berikut Alur Kerja Berdasarkan Desain DNS berikut :
  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/DNS/DNS.drawio.png?raw=true)
@@ -25,7 +25,7 @@ Hierarki DNS: DNS bekerja berdasarkan sistem hierarki, yang terdiri dari beberap
  -  Root Server: Server tingkat atas yang menyimpan daftar semua TLD (Top-Level Domain) server.
  -  TLD Server: Server yang menyimpan informasi tentang domain tingkat atas (misalnya, .com, .org, .net).
  -  Server: Server yang menyimpan informasi tentang domain tingkat rendah (misalnya, www.example.com).
- -  
+ 
 # Alur Proses
 1. Pengguna Memasukkan Nama Domain: Pengguna mengetikkan nama domain (misalnya, example.com) ke dalam browser.
 2. Permintaan ke DNS Resolver: Browser mengirimkan permintaan DNS ke DNS resolver lokal (biasanya disediakan oleh ISP).
