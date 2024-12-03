@@ -15,3 +15,6 @@ Hierarki DNS: DNS bekerja berdasarkan sistem hierarki, yang terdiri dari beberap
 ### 1. Root DNS Servers: Server yang mengarahkan permintaan ke domain tingkat atas.
 ### 2. TLD (Top Level Domain) Servers: Server yang menangani domain tingkat atas seperti .com, .org, .net, dan sebagainya.
 ### 4. Authoritative DNS Servers: Server yang memiliki informasi paling akurat dan terupdate mengenai domain tertentu.
+
+## Berikut Alur Kerja Berdasarkan Desain DNS berikut :
+ ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/DNS/DNS.drawio.png?raw=true)
