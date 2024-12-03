@@ -1,7 +1,7 @@
 ### SMTP (Simple Mail Transfer Protocol) 
 
 SMTP adalah protokol yang digunakan untuk mengirimkan email antar server di internet. SMTP memungkinkan pengiriman pesan dari email client (seperti Outlook, Gmail, atau Thunderbird) ke server email dan antar server email untuk menyampaikan pesan ke penerima yang dituju.
-SMTP bekerja dengan sistem antrian, di mana email yang dikirim akan diproses dan diserahkan ke server tujuan hingga mencapai inbox penerima.\
+SMTP bekerja dengan sistem antrian, di mana email yang dikirim akan diproses dan diserahkan ke server tujuan hingga mencapai inbox penerima.
 
 Berikut Contoh Desain SMTP
  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/SMTP/Simple-Mail-Transfer-Protocol-1.png?raw=true)
