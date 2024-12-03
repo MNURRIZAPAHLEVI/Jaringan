@@ -4,6 +4,8 @@ SMTP adalah protokol yang digunakan untuk mengirimkan email antar server di inte
 SMTP bekerja dengan sistem antrian, di mana email yang dikirim akan diproses dan diserahkan ke server tujuan hingga mencapai inbox penerima.
 
 Berikut Contoh Desain SMTP
+
+
  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/SMTP/Simple-Mail-Transfer-Protocol-1.png?raw=true)
 
  Alur Pengiriman Email Melalui SMTP dan POP3/IMAP
