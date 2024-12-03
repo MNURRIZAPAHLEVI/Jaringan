@@ -18,3 +18,10 @@ Hierarki DNS: DNS bekerja berdasarkan sistem hierarki, yang terdiri dari beberap
 
 ## Berikut Alur Kerja Berdasarkan Desain DNS berikut :
  ![alt text](https://github.com/MNURRIZAPAHLEVI/Jaringan/blob/main/DNS/DNS.drawio.png?raw=true)
+
+ - . Nama Domain: Nama yang mudah diingat oleh manusia untuk mengidentifikasi sebuah website atau layanan online.
+ - . Alamat IP: Alamat numerik unik yang diberikan kepada setiap perangkat yang terhubung ke internet.
+ - . DNS Resolver: Program yang menjalankan permintaan DNS dan menyimpan cache hasil pencarian.
+ - . Root Server: Server tingkat atas yang menyimpan daftar semua TLD (Top-Level Domain) server.
+ - . TLD Server: Server yang menyimpan informasi tentang domain tingkat atas (misalnya, .com, .org, .net).
+ - . Server: Server yang menyimpan informasi tentang domain tingkat rendah (misalnya, www.example.com).
